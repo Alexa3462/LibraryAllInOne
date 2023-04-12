@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>12 Apr 2023, 19:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.accept_header_is(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.created_user_information_should_match_with_database()</td>
+              <td>1</td>
+              <td class="duration" data-value="55280000">0.055</td>
+              <td class="duration" data-value="55280000">0.055</td>
+              <td class="duration" data-value="55280000">0.055</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.created_user_name_should_appear_in_dashboard_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1191909000">1.191</td>
+              <td class="duration" data-value="1191909000">1.191</td>
+              <td class="duration" data-value="1191909000">1.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.created_user_should_be_able_to_login_library_ui()</td>
+              <td>1</td>
+              <td class="duration" data-value="186363500">0.186</td>
+              <td class="duration" data-value="186363500">0.186</td>
+              <td class="duration" data-value="186363500">0.186</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.field_should_not_be_null(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="20368700">0.020</td>
+              <td class="duration" data-value="20368700">0.023</td>
+              <td class="duration" data-value="40737400">0.040</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.i_create_a_random_as_request_body(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="100216100">0.100</td>
+              <td class="duration" data-value="100216100">0.175</td>
+              <td class="duration" data-value="200432200">0.200</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.i_logged_library_api_as_a(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1156094300">1.156</td>
+              <td class="duration" data-value="1156094300">2.019</td>
+              <td class="duration" data-value="2312188600">2.312</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.i_send_post_request_to_endpoint(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="302556950">0.302</td>
+              <td class="duration" data-value="302556950">0.325</td>
+              <td class="duration" data-value="605113900">0.605</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.request_content_type_header_is(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="500400">0.000</td>
+              <td class="duration" data-value="500400">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.response_content_type_is(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1510700">0.001</td>
+              <td class="duration" data-value="1510700">0.003</td>
+              <td class="duration" data-value="3021400">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.status_code_should_be(java.lang.Integer)</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.B28G31_188_API_Step_Defs.the_field_value_for_path_should_be_equal_to(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="22894250">0.022</td>
+              <td class="duration" data-value="22894250">0.034</td>
+              <td class="duration" data-value="45788500">0.045</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.Hooks.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="1689619400">1.689</td>
+              <td class="duration" data-value="1689619400">1.689</td>
+              <td class="duration" data-value="1689619400">1.689</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.Hooks.setUpDB()</td>
+              <td>1</td>
+              <td class="duration" data-value="642129300">0.642</td>
+              <td class="duration" data-value="642129300">0.642</td>
+              <td class="duration" data-value="642129300">0.642</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="99245700">0.099</td>
+              <td class="duration" data-value="99245700">0.099</td>
+              <td class="duration" data-value="99245700">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.library.steps.Hooks.tearDownDB()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>16</td>
+            <td>25</td>
+            <td class="duration">0.282</td>
+            <td class="duration">2.312</td>
+            <td class="duration">7.072</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

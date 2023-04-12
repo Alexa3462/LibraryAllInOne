@@ -39,7 +39,8 @@ public class LibraryAPI_Util {
                 when()
                 .post(ConfigurationReader.getProperty("library.baseUri")+"/login")
                 .prettyPeek()
-                .path("token") ;
+                .then().statusCode(200)
+                .extract().jsonPath().getString("token");
 
 
     }
@@ -59,26 +60,26 @@ public class LibraryAPI_Util {
         return bookMap ;
     }
 
+
     public static Map<String,Object> getRandomUserMap(){
 
         Faker faker = new Faker() ;
-        Map<String,Object> bookMap = new LinkedHashMap<>();
+        Map<String,Object> userMap = new LinkedHashMap<>();
         String fullName = faker.name().fullName();
         String email=fullName.substring(0,fullName.indexOf(" "))+"@library";
         System.out.println(email);
-        bookMap.put("full_name", fullName );
-        bookMap.put("email", email);
-        bookMap.put("password", "libraryUser");
+        userMap.put("full_name", fullName );
+        userMap.put("email", email);
+        userMap.put("password", "libraryUser");
         // 2 is librarian as role
-        bookMap.put("user_group_id",2);
-        bookMap.put("status", "ACTIVE");
-        bookMap.put("start_date", "2023-03-11");
-        bookMap.put("end_date", "2024-03-11");
-        bookMap.put("address", faker.address().cityName());
+        userMap.put("user_group_id",2);
+        userMap.put("status", "ACTIVE");
+        userMap.put("start_date", "2023-03-11");
+        userMap.put("end_date", "2024-03-11");
+        userMap.put("address", faker.address().cityName());
 
-        return bookMap ;
+        return userMap ;
     }
-
 
 
 

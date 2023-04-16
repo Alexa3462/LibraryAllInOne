@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+Test set: As a user, I want to search for a specific user by their id
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.203 s <<< FAILURE! - in As a user, I want to search for a specific user by their id
+As a user, I want to search for a specific user by their id.Retrieve single user  Time elapsed: 0.203 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'I logged Library api as a "librarian"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("I logged Library api as a {string}")
+public void i_logged_library_api_as_a(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("Accept header is {string}")
+public void accept_header_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("Path param is {string}")
+public void path_param_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I send GET request to {string} endpoint")
+public void i_send_get_request_to_endpoint(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("status code should be {int}")
+public void status_code_should_be(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Response Content type is {string}")
+public void response_content_type_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} field should be same with path param")
+public void field_should_be_same_with_path_param(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("following fields should not be null")
+public void following_fields_should_not_be_null(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+

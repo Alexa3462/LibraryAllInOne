@@ -1,4 +1,3 @@
-@us01
 Feature: As a librarian, I want to retrieve all users
 
 

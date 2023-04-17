@@ -1,7 +1,6 @@
 Feature: : As a user, I want to view my own user information using the API
   so that I can see what information is stored about me
-
-@ZU
+@B28G31-193
   Scenario Outline: Decode User
     Given I logged Library api with credentials "<email>" and "<password>" - ZU
     And Accept header is "application/json" - ZU

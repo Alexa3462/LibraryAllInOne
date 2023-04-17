@@ -67,24 +67,17 @@ public class B28G31_US190_StepDefs_NC {
 
     }
     @Then("{string} field should not be null-NC")
-    public void field_should_not_be_null_nc(String field) {
+    public void field_should_not_be_null_nc(String id) {
 
-        if (field.equalsIgnoreCase("id")) {
+        request.accept(contentType)
+                .when().get(ConfigurationReader.getProperty("library.baseUri") + endPoint)
+                .then().statusCode(int1)
+                .contentType(contentType)
+                .body(id, is(notNullValue()));
 
-            request.accept(contentType)
-                    .when().get(ConfigurationReader.getProperty("library.baseUri") + endPoint)
-                    .then().statusCode(int1)
-                    .contentType(contentType)
-                    .body("id", is(notNullValue()));
 
-        } else if (field.equalsIgnoreCase("name")){
 
-            request.accept(contentType)
-                    .when().get(ConfigurationReader.getProperty("library.baseUri") + endPoint)
-                    .then().statusCode(int1)
-                    .contentType(contentType)
-                    .body("name", is(notNullValue()));
-        }
+
 
     }
 

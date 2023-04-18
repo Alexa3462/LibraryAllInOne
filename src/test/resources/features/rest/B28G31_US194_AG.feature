@@ -1,7 +1,7 @@
-@alev
+
 Feature: As a librarian, I want to retrieve all users
 
-  @smoke
+
   Scenario: Retrieve all users from the API endpoint
 
     Given I logged Library api as a "librarian"-AG

@@ -1,7 +1,5 @@
-@vs
+
 Feature: As a librarian, I want to create a new book - VS
-
-
 
   Scenario: Create a new book API - VS
     Given I logged Library api as a "librarian" - VS

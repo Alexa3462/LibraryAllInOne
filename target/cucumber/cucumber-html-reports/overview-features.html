@@ -50,7 +50,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                21,
+                101,
                 0,
                 0,
                 0,
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 21) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 101) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,7 +106,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
+                10,
                 0
             ],
             backgroundColor: [
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,7 +153,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   1,
+                   5,
                    0
                ],
                backgroundColor: [
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 5) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 Apr 2023, 10:46</td>
+      <td>17 Apr 2023, 23:18</td>
     </tr>
   </tbody>
 </table>
@@ -323,7 +323,41 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_3105731889.html">As a librarian, I want to create a new book - VS</a></td>
+        <td class="tagname"><a href="report-feature_1238630349.html">As a librarian, I want to retrieve all users</a></td>
+
+        <td      class="passed"    >7</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">7</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2502361000">2.502</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_1_3726143182.html">As a user, I want to search for a specific user by their id</a></td>
+
+        <td      class="passed"    >8</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">8</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="664042200">0.664</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_2_1918688719.html">As a librarian, I want to create a new book</a></td>
 
         <td      class="passed"    >21</td>
         <td >0</td>
@@ -336,7 +370,41 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="20807796000">20.807</td>
+        <td class="duration" data-value="13840807100">13.840</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_3_111234256.html">As a librarian, I want to create a new user</a></td>
+
+        <td      class="passed"    >21</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">21</td>
+
+        <td  class="passed"    >2</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="7223781200">7.223</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_4_2598747089.html">: As a user, I want to view my own user information using the API</a></td>
+
+        <td      class="passed"    >44</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">44</td>
+
+        <td  class="passed"    >4</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="3794057200">3.794</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -344,19 +412,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>21</td>
+      <td>101</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>21</td>
+      <td>101</td>
 
-      <td>2</td>
+      <td>10</td>
       <td>0</td>
-      <td>2</td>
+      <td>10</td>
 
-      <td class="duration">20.807</td>
-      <td>1</td>
+      <td class="duration">28.025</td>
+      <td>5</td>
     </tr>
     <tr>
       <td></td>
